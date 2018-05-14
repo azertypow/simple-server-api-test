@@ -1,0 +1,32 @@
+{
+  "name": "api-test",
+  "version": "0.0.1",
+  "description": "simple server to test an API response",
+  "main": "main.js",
+  "scripts": {
+    "api-server": "node main.js",
+    "browser-server": "http-server browser_HTTPRequest_sample/",
+    "browser-server-default": "npm run browser-server -- -p 9000 -c-1",
+    "all-default": "concurrently --kill-others \"npm run api-server\" \"npm run browser-server-default\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azertypow/simple-server-api-test.git"
+  },
+  "keywords": [
+    "simple",
+    "server",
+    "API",
+    "test"
+  ],
+  "author": "azertypow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azertypow/simple-server-api-test/issues"
+  },
+  "homepage": "https://github.com/azertypow/simple-server-api-test#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "http-server": "^0.11.1"
+  }
+}
